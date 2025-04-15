@@ -1,0 +1,755 @@
+/* =================== Animations =================== */
+@keyframes hide-up {
+    0% {position: fixed; top: -120px;}    
+    100% {position: fixed; top: 0;}
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =================== General Styling =================== */
+body {
+    background-color: #f8f9fa;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding-bottom: 100px;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 60px;
+    color: #030588;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #666;
+    font-weight: 400;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    all: unset;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* =================== Header Styling =================== */
+header {
+    background: rgb(1, 1, 70);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: #ffcc00 7px solid;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: -140px;
+    transition: transform 0.8s ease-in-out;
+}
+
+header:hover {
+    transform: translateY(140px);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    gap: 50px;
+}
+
+#header-icon {
+    width: 75px;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#header-icon:hover {
+    box-shadow: 0 0 15px 10px gold;
+    transform: scale(1.2);
+}
+
+.header-buttons {
+    all: unset;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 23px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.header-buttons:hover {
+    background: lightyellow;
+    box-shadow: 0 0 25px 5px gold;
+    color: black;
+}
+
+.next-button {
+    font-size: 50px;
+    padding: 15px;
+    width: 120px;
+    border-radius: 30px;
+    border: solid 5px gold;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(135deg, #001f4d, #003f91);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    text-transform: uppercase;
+}
+
+.next-button:hover {
+    transform: scale(1.2);
+    border-color: white;
+    background: linear-gradient(135deg, #003f91, #0056b3);
+    box-shadow: 0 0 20px rgba(173, 216, 230, 0.8);
+    letter-spacing: 2px;
+}
+
+
+/* =================== Section Styling =================== */
+.about-me-section {
+    padding: 50px 20px;
+    margin: 100px auto;
+    text-align: center;
+    max-width: 80%;
+    border-radius: 50px;
+    border: 5px solid gold;
+    background-image: linear-gradient(135deg, #1900ff, #4f8df8);
+    box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.6);
+    transition: transform 0.5s ease-in-out;
+}
+
+.about-me-section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px 10px rgba(255, 215, 0, 0.8);
+}
+
+@media (min-width: 1350px) {
+    .about-me-section {
+        max-width: 1000px;
+    }
+}
+
+section h2 {
+    font-size: 45px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(255, 215, 0, 0.8);
+}
+
+.about-me-section p {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 50px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* =================== Skills Section Styling =================== */
+#skills-content p {
+    background: linear-gradient(135deg, #506308, #020bc2);
+    border: solid 5px #caa308;
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 15px rgba(202, 173, 8, 0.6);
+}
+
+#skills-content p:hover {
+    background: linear-gradient(135deg, #fbff7c, #16a5f8);
+    border: solid 5px white;
+    box-shadow: 0 0 20px rgba(255, 223, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* =================== Values Section Styling =================== */
+#values-content p {
+    background: linear-gradient(135deg, #5f0505, #f81680);
+    border: solid 5px #575757;
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 15px rgba(87, 87, 87, 0.6);
+}
+
+#values-content p:hover {
+    background: linear-gradient(135deg, #ff6e6e, #ffac8b);
+    border: solid 5px white;
+    box-shadow: 0 0 20px rgba(255, 223, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* =================== Interests Section Styling =================== */
+#interests-content p {
+    background: linear-gradient(135deg, #055f5f, #49029b);
+    border: solid 5px #c204c2;
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 15px rgba(194, 4, 194, 0.6);
+}
+
+#interests-content p:hover {
+    background: linear-gradient(135deg, #12ffff, #a658ff);
+    border: solid 5px white;
+    box-shadow: 0 0 20px rgba(255, 223, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* =================== Footer Styling =================== */
+footer {
+    padding: 20px;
+    border-top: #ffcc00 7px solid;
+    width: 100%;
+    background: rgb(1, 1, 70);
+    color: white;
+    padding: 15px 0;
+    margin-top: 30px;
+    position: fixed;
+    bottom: -100px;
+    transition: transform 0.8s ease-in-out;
+}
+
+footer:hover {
+    transform: translateY(-70px);
+}
+/* =================== Main Sections =================== */
+
+/* Ensure images stack and fade properly */
+
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height for centering */
+    text-align: center;
+}
+
+/* =================== Hero Section Styling =================== */
+.hero h1 {
+    position: absolute;
+    z-index: 2;
+    background: linear-gradient(135deg, rgba(2, 2, 111, 0.6), rgba(0, 31, 77, 0.6)); /* Transparent Glass Effect */
+    padding: 35px 50px;
+    border: solid 6px gold;
+    color: #FFD700;
+    text-shadow: 3px 3px 15px rgba(255, 215, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.6), 0 0 30px 15px rgba(0, 0, 0, 0.7);
+    -webkit-text-stroke: 2px rgba(255, 223, 0, 0.9);
+    max-width: 80%;
+    font-family: 'Georgia', serif;
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    opacity: 0.85;
+    border-radius: 15px;
+    animation: glowEffect 1.5s infinite alternate;
+    backdrop-filter: blur(10px); /* Frosted Glass Effect */
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.4s ease-in-out;
+}
+
+.hero h1:hover {
+    transform: scale(1.1);
+    text-shadow: 5px 5px 20px rgba(255, 215, 0, 1), 0 0 15px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 25px 10px rgba(255, 223, 0, 0.9), 0 0 40px 20px rgba(0, 0, 0, 0.9);
+    background: linear-gradient(135deg, rgba(5, 5, 120, 0.75), rgba(0, 40, 90, 0.75));
+}
+
+@keyframes glowEffect {
+    0% {
+        box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.6), 0 0 30px 15px rgba(0, 0, 0, 0.7);
+    }
+    100% {
+        border-color: rgb(255, 247, 128);
+        box-shadow: 0 0 35px 10px #fff091e6, 0 0 40px 20px rgba(0, 0, 0, 0.9);
+    }
+}
+
+/* Ensure all images are positioned properly */
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0; /* Ensure it's hidden initially */
+    transition: opacity 1s ease-in-out;
+    border-bottom:rgb(212, 209, 1) 8px solid;
+}
+
+/* Show the active image */
+.hero-image.active {
+    opacity: 1;
+}
+
+
+/* Dots Container */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    margin-top: 20px;
+}
+
+/* Individual Dots */
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.dot.active {
+    background-color: #ffcc00;
+    transform: scale(1.2);
+}
+
+/* =================== Main Content Styling =================== */
+main {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Soft gradient */
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 50px auto; /* Center alignment */
+}
+
+main .container {
+    background: white; /* Keeps text area clean */
+    border: solid 1px navy;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+main button {
+    background-color: navy;
+    color: white;
+    border: solid 5px gold;
+    width: 25%;
+    padding: 10px;
+    margin: 0 15px;
+    border-radius: 15% / 50% ;
+    transition: 0.5s;
+    cursor: pointer;
+
+    font-size: 20px;
+}
+
+main button:hover {
+    background-color: rgb(37, 41, 255);
+    border-color: lightyellow;
+    box-shadow: 0 0 5px goldenrod;
+    transform: scale(1.1);
+}
+      
+main h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #030588;
+    letter-spacing: 2px;
+}
+
+main h3 {
+    font-size: 22px;
+    color: #444;
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+main h3:nth-child(2) {
+    font-weight: bold;
+    color: #007bff; /* Adds a slight pop for distinction */
+}
+
+main h3:nth-child(3) {
+    font-style: italic;
+    color: #6c757d; /* Subtle secondary color */
+}
+
+
+.intro, .about, .skills, .projects, .contact {
+    padding: 30px 0;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.projects .project {
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* Admin Icon Styling */
+.admin-icon {
+    position: relative;
+    bottom: 50px;
+    right: 10px;
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    filter: invert(); /* Inverts colors (white on dark mode) */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover effect */
+    cursor: pointer;
+    float: right;
+}
+
+/* Hover Effect */
+.admin-icon:hover {
+    transform: scale(1.2) rotate(5deg);
+    filter: invert(1) brightness(1.2); /* Enhances contrast */
+}
+
+/* =================== Widgets =================== */
+section .container {
+    margin-top: 30px;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 200px;
+    height: 200px;
+    border-radius: 25%;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border: solid 8px gold;
+    background: linear-gradient(145deg, blue, #130241);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.6s;
+}
+
+.widget:hover {
+    border-color: lightyellow;
+    background: linear-gradient(145deg, blue, #130241);
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px 5px rgba(255, 215, 0, 0.6);
+}
+
+/* =================== Contact Icons =================== */
+section .container a img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+/* =================== Get In Touch Section =================== */
+#contact {
+    background: linear-gradient(135deg, #191c1f, #343a40); /* Dark gradient background */
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+    position: relative;
+}
+
+#contact h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ffcc00; /* Eye-catching gold */
+    letter-spacing: 2px;
+}
+
+/* Contact Icons Styling */
+.contact-icons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensures items stay aligned */
+    gap: 50px;
+    height: 130px;
+    padding: 20px 0;
+}
+
+/* Prevents movement on hover */
+.contact-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Set a fixed width */
+    height: 60px; /* Set a fixed height */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Contact Icons - Size & Animation */
+.contact-icons img {
+    border-radius: 50%;
+    background: white;
+    padding: 10px;
+    width: 50px; /* Ensure fixed size */
+    height: 50px; /* Ensure fixed size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    will-change: transform; /* Optimizes hover effect */
+    transform-origin: center; /* Prevents unintended movement */
+}
+
+/* Hover Effects - No Layout Shift */
+.contact-icons img:hover {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0px 5px 15px 8px rgba(255, 204, 0, 0.6); /* Gold glow */
+}
+
+/* CTA Text */
+#contact p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 15px;
+    color: #ddd;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CTA Button */
+#contact .cta-button {
+    display: inline-block;
+    background: #ffcc00;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+#contact .cta-button:hover {
+    background-color: #d1a802;
+    color: white;
+}
+
+
+/* =================== Projects Section =================== */
+#projects {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f9fa;
+}
+
+#projects h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #191c1f;
+}
+
+/* Project Grid Layout */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual Project Cards */
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 280px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card img {
+    width: 100%;
+    height: 2
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Button for Each Project */
+.project-btn {
+    display: inline-block;
+    border: solid 0 gold;
+    background: #ffcc00;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.project-btn:hover {
+    background-color: #d1a802;
+    color: white;
+}
+
+/* Hover Effect for Project Cards */
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* =================== Certifications Section =================== */
+#certifications {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8f9fa;
+}
+
+#certifications h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #191c1f;
+}
+
+/* Certifications Grid Layout */
+.certifications-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual Certification Cards */
+.certification-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.certification-card img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.certification-card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.certification-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* View Certificate Button */
+.cert-btn {
+    display: inline-block;
+    background: #ffcc00;
+    border: solid 0 gold;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.cert-btn:hover {
+    background-color: #d1a802;
+    color: white;
+}
+
+/* Hover Effect for Certification Cards */
+.certification-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .certifications-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
