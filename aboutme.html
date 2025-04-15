@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Mahajan's Digital Portfolio</title>
+
+    <!-- External Stylesheets & Favicon -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="Images/portfolio-icon.png">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <a href="#">
+                <img src="Images/portfolio-icon.png" id="header-icon" alt="Portfolio Logo">
+            </a>
+            <nav>
+                <a href="#" class="header-buttons">CV</a>
+                <a href="certifications.html" class="header-buttons">Certifications</a>
+                <a href="projects.html" class="header-buttons">Projects</a>
+                <a href="#contact" class="header-buttons">Get In Touch!</a>
+            </nav>
+        </div>
+    </header>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aryan Mahajan's Digital Portfolio</title>
+    
+        <!-- External Stylesheets & Favicon -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/x-icon" href="Images/portfolio-icon.png">
+    </head>
+    
+    <body>
+        <!-- Header Section -->
+        <header>
+            <div class="container">
+                <a href="index.html">
+                    <img src="Images/portfolio-icon.png" id="header-icon" alt="Portfolio Logo">
+                </a>
+                <nav>
+                    <a href="#" class="header-buttons">CV</a>
+                    <a href="certifications.html" class="header-buttons">Certifications</a>
+                    <a href="projects.html" class="header-buttons">Projects</a>
+                    <a href="index.html#contact" class="header-buttons">Get In Touch!</a>
+                </nav>
+            </div>
+        </header>
+    
+        <!-- Hero Image Section with Slideshow -->
+    
+        <!-- Key Skills Section -->
+        <section id="skills" class="about-me-section">
+            <h2>Key Skills</h2> 
+            <div id="skills-content">
+                <p onclick="toggleDescription('desc-skills1')">First Principles Thinking</p>
+                <div id="desc-skills1" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <p onclick="toggleDescription('desc-skills2')">Mental Model Stacking</p>
+                <div id="desc-skills2" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <p onclick="toggleDescription('desc-skills3')">OODA (Observe, Orient, Decide, Act)</p>
+                <div id="desc-skills3" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <p onclick="toggleDescription('desc-skills4')">Anticipatory Thinking</p>
+                <div id="desc-skills4" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <p onclick="toggleDescription('desc-skills5')">Bayesian Inferencing</p>
+                <div id="desc-skills5" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <p onclick="toggleDescription('desc-skills6')">Adversarial Thinking</p>
+                <div id="desc-skills6" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <p onclick="toggleDescription('desc-skills7')">Cognitive Load Management</p>
+                <div id="desc-skills7" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            </div>
+        </section>
+
+        <script>
+            function toggleDescription(id) {
+                var desc = document.getElementById(id);
+                if (desc.style.maxHeight) {
+                    desc.style.maxHeight = null;
+                    desc.style.opacity = "0";
+                    setTimeout(() => {
+                        desc.style.display = "none";
+                    }, 300);
+                } else {
+                    desc.style.display = "block";
+                    setTimeout(() => {
+                        desc.style.maxHeight = desc.scrollHeight + "px";
+                        desc.style.opacity = "1";
+                    }, 10);
+                }
+            }
+        </script>
+
+        <style>
+            .skill-description {
+                display: none;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                padding: 10px;
+                margin-top: 5px;
+                font-size: 14px;
+                color: white;
+                background: rgba(0, 0, 0, 0.7);
+                border-radius: 5px;
+                text-align: center;
+                transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+            }
+
+
+            #skills-content p {
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
+
+            #skills-content p:hover {
+                color: gold;
+                text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.7);
+            }
+        </style>
+    
+        <!-- Core Values Section -->
+        <section id="values" class="about-me-section">
+            <h2>Core Values</h2>
+            <div id="values-content">
+                <p onclick="toggleDescription('desc-values1')">Innovation & Continuous Learning</p>
+                <div id="desc-values1" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <p onclick="toggleDescription('desc-values2')">Integrity & Ethical Decision Making</p>
+                <div id="desc-values2" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <p onclick="toggleDescription('desc-values3')">Collaboration & Leadership</p>
+                <div id="desc-values3" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <p onclick="toggleDescription('desc-values4')">Adaptability & Problem-Solving</p>
+                <div id="desc-values4" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <p onclick="toggleDescription('desc-values5')">Excellence & High Performance</p>
+                <div id="desc-values5" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="interests" class="about-me-section">
+            <h2>Explorations</h2>
+            <div id="interests-content">
+                <p onclick="toggleDescription('desc-interests1')">Investment Banking & Financial Markets</p>
+                <div id="desc-interests1" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <p onclick="toggleDescription('desc-interests2')">Artificial Intelligence & Machine Learning</p>
+                <div id="desc-interests2" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <p onclick="toggleDescription('desc-interests3')">Entrepreneurship & Business Strategy</p>
+                <div id="desc-interests3" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <p onclick="toggleDescription('desc-interests4')">Game Design & Interactive Technologies</p>
+                <div id="desc-interests4" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <p onclick="toggleDescription('desc-interests5')">Chess & Competitive Strategy Games</p>
+                <div id="desc-interests5" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <p onclick="toggleDescription('desc-interests6')">Fitness & Wellness Optimization</p>
+                <div id="desc-interests6" class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            </div>
+        </section>
+
+        <a href="index.html"> <button class="next-button">🡄</button> </a>
+    
+        <!-- Footer Section -->
+        <footer>
+            <div>
+                <h2>© 2025 Aryan Mahajan. All Rights Reserved. </h2>
+            <a href="#" id="admin-icon"> <img src="Images/admin-icon.png" alt='admin-dashboard-login' class="admin-icon"> </a>
+            </div>
+        </footer>
+    </body>
+    <script src="script/script.js"></script>
+    
+    </html>
+    
+
+    <!-- Footer Section -->
+    <footer>
+        <div>
+            <h2>© 2025 Aryan Mahajan. All Rights Reserved. </h2>
+        <a href="#" id="admin-icon"> <img src="Images/admin-icon.png" alt='admin-dashboard-login' class="admin-icon"> </a>
+        </div>
+    </footer>
+</body>
+<script src="script/script.js"></script>
+
+</html>
