@@ -1,60 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Aryan Mahajan's Digital Portfolio </title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Mahajan's Digital Portfolio</title>
+
+    <!-- External Stylesheets & Favicon -->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="Images/portfolio-icon.png">
-    <script src="index.js"></script>
 </head>
-<body id="overview-page-body" class="body">
-<!-- Heading -->
-    <div id="portfolio-heading">
-        <img class="portfolio-title" src="Images/portfolio-title-part-2.png">
-        <img class="portfolio-title" src="Images/portfolio-title-part-1.png">
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <a href="#">
+                <img src="Images/portfolio-icon.png" id="header-icon" alt="Portfolio Logo">
+            </a>
+            <nav>
+                <a href="#explore" class="header-buttons">CV</a>
+                <a href="certifications.html" class="header-buttons">Certifications</a>
+                <a href="projects.html" class="header-buttons">Projects</a>
+                <a href="#contact" class="header-buttons">Get In Touch!</a>
+            </nav>
+        </div>
+    </header>
+
+   <!-- Hero Image Section with Slideshow -->
+<section class="hero">
+    <h1> Aryan Mahajan's Digital Portfolio </h1>
+    <div class="slideshow-container">
+        <img src="https://t3.ftcdn.net/jpg/00/52/14/94/360_F_52149432_4FhRgWtKJQFCM299StO3te3zwXF5KAfE.jpg" 
+        alt="Professional Abstract Background" class="hero-image fade">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixid=eyJhcHBfaWQiOjEyMDd9&ixlib=rb-1.2.1&q=80&w=1000" 
+        alt="Second Background" class="hero-image fade">
+        <img src="https://plus.unsplash.com/premium_photo-1670315266831-a9015ccb3259?auto=format&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1pbi1zYW1lLXNlcmllc3w0fHx8ZW58MHx8fHx8&ixlib=rb-4.0.3&q=80&w=1000" 
+        alt="Third Background" class="hero-image fade">
+        <img src="https://img.freepik.com/premium-photo/modern-corporate-buildings-city-downtown-district-with-sun-light_241146-2371.jpg" 
+        alt="Fourth Background" class="hero-image fade">
     </div>
-<!-- Other Pages -->
-    <div id="subpages-section">
-        <a href="index.html">
-        <button class="button">
-            Overview
-        </button>
-        </a>
-        <a href="aboutmepage.html">
-        <button class="button">
-            More About Me
-        </button>
-        </a>
-        <a href="projects-page.html">
-        <button class="button">
-            Projects
-        </button>
-        </a>
+</section>
+    <!-- Dots for Manual Navigation -->
+    <div class="dots-container">
+        <div class="dot active" onclick="changeSlide(0)"></div>
+        <div class="dot" onclick="changeSlide(1)"></div>
+        <div class="dot" onclick="changeSlide(1)"></div>
+        <div class="dot" onclick="changeSlide(1)"></div>
     </div>
-<!-- More About Me -->
-    <div id="about-me-section">
-        <h2 id="about-me-part-1"> Hi! My name's Aryan Mahajan. </h2>
-        <h4 id="about-me-part-2"> Outside of being a Psychology and DEM Student at UTM, I am also a Self-Taught Computer Programmer
-        with a passion to learn continuously, create cool things, and impress people.
-        </h4>
-        <h4 id="about-me-part-3">
-          My Digital Hub consists of all of the projects that I have worked from September 2023 to the present. Have a look!
-        </h4>
-    </div>
-<div id="contact-me-section">
-    <!-- Contacts Section -->
-    <h2 id="c-m-title"> Contact Me! </h2>
-        <a href="https://www.linkedin.com/in/aryan-mahajan-6b00a928b/">
-            <img class="icon" src="https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjk4Mi1kNS0xMF8xLnBuZw.png">
-        </a>
-        <a href="https://twitter.com/aryan_mahajan04">
-            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/X_icon_2.svg/2048px-X_icon_2.svg.png">
-        </a>
-        <a href="https://www.instagram.com/am.topshooter23_/">
-            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png">
-        </a>
-    <h4 class="c-m-text" id="text-1"> Email: themusician3242@gmail.com </h4>
-    <h4 class="c-m-text" id="text-2"> Phone: 416-474-2792 </h4>
-</div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h1>Aryan Mahajan</h1>
+            <h3>3rd-Year Digital Enterprise Management (DEM) Specialist & Psychology Major.</h3>
+            <h3>Strong analytical & strategic thinker with a strong foundation in Forward-Facing Sales & Customer Service, Data Analysis (Python, Jamovi (SPSS), Excel), Applied Psychology, and Business Analytics.</h3>
+            <h3> Undergoing the CFA Level 1, actively exploring how Capital Markets & Financial Design can restrengthen the Gaming Industry's drawbacks. </h3>
+                <a href="aboutme.html#skills"> <button> My Skills </button> </a>
+                <a href="aboutme.html#values"> <button> My Values </button> </a>
+                <a href="aboutme.html#interests"> <button> My Interests </button> </a>
+        </div>
+    </main>
+
+    <!-- Explore Section -->
+    <section id="explore">
+        <h1>Experience</h1>
+        <div class="container widget-container">
+            <a href='certifications.html'> <div class="widget">Explore Certifications</div> </a>
+            <a href="projects.html"> <div class="widget">Explore Projects</div> </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Get In Touch!</h1>
+        <p>Let's connect! Reach out via LinkedIn, GitHub, or Email.</p>
+        <div class="container contact-icons">
+            <a href="https://www.linkedin.com/in/aryan-mahajan-6b00a928b/" target="_blank">
+                <img src="Images/linkedin-icon.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/themusician3242" target="_blank">
+                <img src="Images/github-icon.png" alt="GitHub">
+            </a>
+            <a href="mailto:themusician3242@gmail.com">
+                <img src="Images/email-icon.png" alt="Email">
+            </a>
+        </div>
+        <a href="mailto:themusician3242@gmail.com" class="cta-button">Contact Me</a>
+    </section>
+    
+
+    <!-- Footer Section -->
+    <footer>
+        <div>
+            <h2>© 2025 Aryan Mahajan. All Rights Reserved. </h2>
+        <a href="#" id="admin-icon"> <img src="Images/admin-icon.png" alt='admin-dashboard-login' class="admin-icon"> </a>
+        </div>
+    </footer>
 </body>
+<script src="script/script.js"></script>
+
 </html>
