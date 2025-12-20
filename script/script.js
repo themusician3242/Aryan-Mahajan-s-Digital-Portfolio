@@ -4,18 +4,18 @@ document.addEventListener('DOMContentLoaded', () => {
 const headerIcons = document.querySelectorAll(".header-icon");
 const navItems = document.querySelectorAll(".nav-item");
 const headerIconImages = [
-  "Images/header-icons/icon-1.png",
-  "Images/header-icons/icon-2.png",
-  "Images/header-icons/icon-3.png",
-  "Images/header-icons/icon-4.png",
-  "Images/header-icons/icon-5.png",
+  "images/header-icons/icon-1.png",
+  "images/header-icons/icon-2.png",
+  "images/header-icons/icon-3.png",
+  "images/header-icons/icon-4.png",
+  "images/header-icons/icon-5.png",
 ]
 const headerIconImagesHoverable = [
-  "Images/header-icons/icon-1-hover.png",
-  "Images/header-icons/icon-2-hover.png",
-  "Images/header-icons/icon-3-hover.png",
-  "Images/header-icons/icon-4-hover.png",
-  "Images/header-icons/icon-5-hover.png",
+  "images/header-icons/icon-1-hover.png",
+  "images/header-icons/icon-2-hover.png",
+  "images/header-icons/icon-3-hover.png",
+  "images/header-icons/icon-4-hover.png",
+  "images/header-icons/icon-5-hover.png",
 ]
 
 navItems.forEach((item, index) => {
@@ -40,14 +40,14 @@ navItems.forEach((item, index) => {
   const layerBottom = document.querySelector('.layer-bottom');
 
   const heroBackgroundImages = [
-    "Images/backgrounds/image-1.jpg",
-    "Images/backgrounds/image-2.jpg",
-    "Images/backgrounds/image-3.jpg",
-    "Images/backgrounds/image-4.jpg",
-    "Images/backgrounds/image-5.jpg",
-    "Images/backgrounds/image-6.jpg",
-    "Images/backgrounds/image-7.jpg",
-    "Images/backgrounds/image-8.jpg"
+    "images/backgrounds/image-1.jpg",
+    "images/backgrounds/image-2.jpg",
+    "images/backgrounds/image-3.jpg",
+    "images/backgrounds/image-4.jpg",
+    "images/backgrounds/image-5.jpg",
+    "images/backgrounds/image-6.jpg",
+    "images/backgrounds/image-7.jpg",
+    "images/backgrounds/image-8.jpg"
   ];
 
   let previousIndex = 0;
