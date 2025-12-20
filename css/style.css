@@ -282,7 +282,7 @@ nav {
     transition: opacity 3s ease-in-out;
 }
 .layer-top {
-    background-image: url("../images/backgrounds/image-1.jpg");
+    background-image: url("../Images/backgrounds/image-1.jpg");
     opacity: 1;
     z-index: 1;
 }
@@ -766,3 +766,4 @@ footer {
     position: relative;
     bottom: 0;
 }
+
