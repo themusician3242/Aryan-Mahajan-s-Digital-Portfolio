@@ -21,18 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerIcons = document.querySelectorAll(".header-icon");
     const navItems = document.querySelectorAll(".nav-item");
     const headerIconImages = [
-        "images/header-icons/icon-1.png",
-        "images/header-icons/icon-2.png",
-        "images/header-icons/icon-3.png",
-        "images/header-icons/icon-4.png",
-        "images/header-icons/icon-5.png",
+        "Images/header-icons/icon-1.png",
+        "Images/header-icons/icon-2.png",
+        "Images/header-icons/icon-3.png",
+        "Images/header-icons/icon-4.png",
+        "Images/header-icons/icon-5.png",
     ]
     const headerIconImagesHoverable = [
-        "images/header-icons/icon-1-hover.png",
-        "images/header-icons/icon-2-hover.png",
-        "images/header-icons/icon-3-hover.png",
-        "images/header-icons/icon-4-hover.png",
-        "images/header-icons/icon-5-hover.png",
+        "Images/header-icons/icon-1-hover.png",
+        "Images/header-icons/icon-2-hover.png",
+        "Images/header-icons/icon-3-hover.png",
+        "Images/header-icons/icon-4-hover.png",
+        "Images/header-icons/icon-5-hover.png",
     ]
 
     const infoTitle = {
