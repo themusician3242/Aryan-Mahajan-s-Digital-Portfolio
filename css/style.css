@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quintessential&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
 
 html {
     font-family: "Open Sans", sans-serif;
@@ -162,6 +163,14 @@ a {
 
 .tinos {
     font-family: Tinos, serif;
+}
+
+.old-standard { 
+    font-family: "Old Standard TT", serif;
+}
+
+.noto-serif { 
+    font-family: "Noto Serif", serif;
 }
 
 /* Animations */
@@ -762,6 +771,22 @@ hr {
         padding: 20mm; /* your own page margin */
 }
 
+#contactsCard { 
+    border: solid 3px gold;
+    background-color: white;
+}
+
+.bi { 
+    width: 22px !important;
+    height: 22px !important;
+}
+.socials-icon { 
+    transition: all 0.3s ease;
+}
+.socials-icon:hover {
+    transform: rotate(360deg) scale(1.1);
+    color: gold !important;
+}
 footer {
     position: relative;
     bottom: 0;
