@@ -34,6 +34,10 @@ p {
     height: 40px;
 }
 
+.nav-item:hover a { 
+    color: yellow !important;
+}
+
 a {
     text-decoration: none !important;
     transition: all 0.2s ease-in;
@@ -472,7 +476,7 @@ nav {
 }
 
 /* --- COLLAPSED STATE --- */
-#progressSidebar .collapsed {
+#progressSidebar.collapsed {
     width: 55px;
 }
 #progressSidebar.collapsed #sectionNav,
@@ -481,7 +485,7 @@ nav {
     display: none;
 }
 
-#progressSidebar .collapsed #toggleSidebar {
+#progressSidebar.collapsed #toggleSidebar {
     transform: rotate(180deg);
 }
 
@@ -739,18 +743,15 @@ hr {
 }
 /* Print Optimization */
 @media print {
-
     /* Hide EVERYTHING */
     body * {
         visibility: hidden !important;
     }
-
     /* Show ONLY the resume */
     #print-area,
     #print-area * {
         visibility: visible !important;
     }
-
     /* Keep resume positioned at top-left for printing */
     #print-area {
         position: absolute;
@@ -763,12 +764,19 @@ hr {
         box-shadow: none;
     }
 }
-    @page {
-        margin: 0;
-    }
+@page {
+    margin: 0;
+}
 
-    #print-area {
-        padding: 20mm; /* your own page margin */
+#print-area {
+    padding: 20mm; /* your own page margin */
+}
+
+/* CONTACT ME SECTION: */
+#contactsSection { 
+    background-image: url("../images/backgrounds/image-1.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 #contactsCard { 
