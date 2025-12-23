@@ -265,7 +265,6 @@ a {
 nav {
     border-bottom: solid 6px gold; 
 }
-
 /* Hero */
 #main-hero {
     text-align: center;
@@ -796,6 +795,7 @@ hr {
     color: gold !important;
 }
 footer {
+    border-top: gold 5px solid;
     position: relative;
     bottom: 0;
 }
