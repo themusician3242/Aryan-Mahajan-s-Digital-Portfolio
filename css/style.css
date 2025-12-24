@@ -579,12 +579,14 @@ nav {
     background-position: center;
 
     color: white;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.897);
+    font-weight: bold;
 }
 .story-content-wrapper { 
     width: 100%;
     max-width: 800px;
     margin: auto;
+    padding: 30px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.55))
 }
 .story-subsection {
     padding: 25px 30px;
