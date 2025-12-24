@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
 
+/* HTML and Body */
 html {
     font-family: "Open Sans", sans-serif;
 }
@@ -52,8 +53,10 @@ a {
     box-shadow: 0 0 5px 2px gold;
 }
 
-#intro-carousel, #hopes-and-dreams-carousel {
+#storyWrapper .carousel {
     border: solid 5px gold;
+    max-width: 600px;
+    margin: auto;
 }
 
 /* Tooltips */
@@ -206,7 +209,7 @@ a {
     filter: contrast(1.5);
 }
 
-.fade-out {
+.fade-in { 
     opacity: 1;
 }
 
@@ -260,6 +263,9 @@ a {
         text-align: center;
     }
 }
+
+
+/* ======== PAGE CONTENT ======= */
 
 /* Header */
 nav {
@@ -557,11 +563,28 @@ nav {
     .story-image {
         width: 100% !important;
     }
+
+    #storyWrapper { 
+        width: 100% !important;
+    }
 }
 
 /* Story: Sections */
 .story-section {
     padding: 50px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.897);
+}
+.story-content-wrapper { 
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
 }
 .story-subsection {
     padding: 25px 30px;
@@ -575,6 +598,28 @@ nav {
 }
 .principles-section.active-section {
     display: block !important;
+}
+
+/* Story Sections - Visuals */
+#dynamicBackground1,
+#dynamicBackground2 {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover !important;
+    background-position: center !important;
+    transition: opacity 1.2s ease-in-out;
+    z-index: -1;
+    opacity: 1;
+}
+#dynamicBackground2 {
+    opacity: 1;
+}
+
+/* This class ACTUALLY fades a layer out */
+#dynamicBackground1.fade-out, #dynamicBackground2.fade-out {
+    opacity: 0;
 }
 
 /* Core Subcomponents - Functionality */

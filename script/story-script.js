@@ -35,6 +35,110 @@ document.addEventListener('DOMContentLoaded', () => {
         "images/header-icons/icon-5-hover.png",
     ]
 
+    // Fading Backgrounds (ID-threshold mapped to backgroundList index)
+    const dynamicBackground1 = document.getElementById('dynamicBackground1');
+    const dynamicBackground2 = document.getElementById('dynamicBackground2');
+    const backgrounds = [dynamicBackground1, dynamicBackground2];
+    const overlayGradient =
+        "linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35))";
+
+    let backgroundIndex = 0;
+
+    const backgroundList = [
+        "images/story/backgrounds/image-1.jpg",
+        "images/story/backgrounds/image-2.png",
+        "images/story/backgrounds/image-3.jpg",
+        "images/story/backgrounds/image-4.jpg",
+        "images/story/backgrounds/image-5.webp",
+        "images/story/backgrounds/image-6.webp",
+        "images/story/backgrounds/image-7.png",
+        "images/story/backgrounds/image-8.jpeg",
+        "images/story/backgrounds/image-9.jpg",
+        "images/story/backgrounds/image-10.avif",
+        "images/story/backgrounds/image-11.jpg",
+        "images/story/backgrounds/image-12.webp",
+        "images/story/backgrounds/image-13.png",
+        "images/story/backgrounds/image-14.jpg",
+    ];
+
+    const thresholds = [
+        "opening",
+        "timeline1",
+        "timeline2",
+        "timeline3",
+        "timeline4",
+        "timeline5",
+        "timeline6",
+        "timeline7",
+        "timeline8",
+        "present1",
+        "present2",
+        "present3",
+        "present4",
+        "present5"
+    ];
+
+    // Build: subsection id -> background index
+    const idToBgIndex = new Map(thresholds.map((id, idx) => [id, idx]));
+
+    let activeLayer = 0;
+    let locked = false;
+
+    // Initialize first background (opening -> index 0)
+    backgrounds[0].style.backgroundImage = `url("${backgroundList[0]}")`;
+    backgrounds[0].classList.remove("fade-out");
+    backgrounds[1].classList.add("fade-out");
+
+    function fadeToIndex(targetIndex) {
+        if (locked || targetIndex === backgroundIndex) return;
+
+        locked = true;
+
+        const incoming = backgrounds[1 - activeLayer];
+        const outgoing = backgrounds[activeLayer];
+
+        incoming.style.background =
+            `${overlayGradient}, url("${backgroundList[targetIndex]}")`;
+
+        incoming.classList.remove("fade-out");
+        outgoing.classList.add("fade-out");
+
+        activeLayer = 1 - activeLayer;
+        backgroundIndex = targetIndex;
+
+        setTimeout(() => {
+            locked = false;
+        }, 1200);
+    }
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                const id = entry.target.id;
+                const idx = idToBgIndex.get(id);
+
+                // Only change if it's one of your declared threshold IDs and has a matching background
+                if (typeof idx === "number" && backgroundList[idx]) {
+                    fadeToIndex(idx);
+                }
+            });
+        },
+        {
+            root: null,
+            rootMargin: "-50% 0px -49% 0px",
+            threshold: 0
+        }
+    );
+
+    // Observe only the threshold sections by id (fast + exact)
+    thresholds.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+    });
+
+
     const infoTitle = {
         "who": "By Whom Is It Used?",
         "how": "How Is It Used?",
