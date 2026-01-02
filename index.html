@@ -10,49 +10,58 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body class="text-center">    
+<body class="text-center" data-page="index">    
     <!-- Header -->
     <nav class="header navbar navbar-expand-lg d-flex justify-content-center align-items-center py-3 bg-dark-blue">
-        <div class="d-flex align-items-center justify-content-center text-center">
-                <img class="expand-and-spin" src="images/portfolio-icon.png" alt="" style="width:60px">
-                <h3 class="tinos nav-brand text-warning mx-5" style="font-size: 35px; min-size: 10px;">Aryan Mahajan's Digital Portfolio</h3>
-        </div>
-        <ul class="d-flex nav nav-pills">
-          <li class="nav-item text-center expand-default">
-            <a href="index.html" class="quintessential nav-link text-warning d-flex flex-column align-items-center">
-              <img src="images/header-icons/icon-1.png" alt="" class="header-icon nav-item-icon">
-              Home
-            </a>
-          </li>
-          <li class="nav-item text-center expand-default">
-            <a href="resume.html" class="quintessential nav-link text-warning d-flex flex-column align-items-center">
-              <img src="images/header-icons/icon-2.png" alt="" class="header-icon nav-item-icon">
-              Resume
-            </a>
-          </li>
-          <li class="nav-item text-center expand-default">
-            <a href="story.html" class="quintessential nav-link text-warning d-flex flex-column align-items-center">
-              <img src="images/header-icons/icon-3.png" alt="" class="header-icon nav-item-icon">
-              Story
-            </a>
-          </li>
-          <li class="nav-item text-center expand-default">
-            <a href="gallery.html" class="quintessential nav-link text-warning d-flex flex-column align-items-center">
-              <img src="images/header-icons/icon-4.png" alt="" class="header-icon nav-item-icon">
-              Gallery
-            </a>
-          </li>
-          <li class="nav-item text-center expand-default">
-            <a href="contact.html" class="quintessential nav-link text-warning d-flex flex-column align-items-center">
-              <img src="images/header-icons/icon-5.png" alt="" class="header-icon nav-item-icon">
-              Contact
-            </a>
-          </li>
-        </ul>
+      <div class="d-flex align-items-center justify-content-center text-center">
+        <img class="expand-and-spin" src="images/portfolio-icon.png" alt="" style="width:60px">
+        <h3 class="tinos nav-brand text-warning mx-5" style="font-size: 35px; min-size: 10px;">Aryan Mahajan's Digital
+          Portfolio</h3>
+      </div>
+      <ul class="d-flex nav nav-pills">
+        <li class="nav-item text-center expand-default">
+          <a href="index.html" class="quintessential nav-link text-warning d-flex flex-column align-items-center">
+            <img src="images/header-icons/icon-1.png" alt="" class="header-icon nav-item-icon">
+            Home
+          </a>
+        </li>
+        <li class="nav-item text-center expand-default">
+          <a href="resume.html" class="quintessential nav-link text-warning d-flex flex-column align-items-center">
+            <img src="images/header-icons/icon-2.png" alt="" class="header-icon nav-item-icon">
+            Resume
+          </a>
+        </li>
+        <li class="nav-item text-center expand-default">
+          <a href="story.html" class="quintessential nav-link text-warning d-flex flex-column align-items-center">
+            <img src="images/header-icons/icon-3.png" alt="" class="header-icon nav-item-icon">
+            Story
+          </a>
+        </li>
+        <li class="nav-item text-center expand-default">
+          <a href="gallery.html" class="quintessential nav-link text-warning d-flex flex-column align-items-center">
+            <img src="images/header-icons/icon-4.png" alt="" class="header-icon nav-item-icon">
+            Gallery
+          </a>
+        </li>
+        <li class="nav-item text-center expand-default">
+          <a href="contact.html" class="quintessential nav-link text-warning d-flex flex-column align-items-center">
+            <img src="images/header-icons/icon-5.png" alt="" class="header-icon nav-item-icon">
+            Contact
+          </a>
+        </li>
+        <li class="nav-item text-center expand-default">
+          <a href="services.html" class="quintessential nav-link text-warning d-flex flex-column align-items-center">
+            <img src="images/header-icons/icon-6.png" alt="" class="header-icon nav-item-icon">
+            Services
+          </a>
+        </li>
+      </ul>
     </nav>
-
     <!-- Hero -->
+
 <main>
+  <div id="dynamicBackground3">
+  </div>
     <section id="main-hero" class="text-light p-4 align-content-center">
         <div class="hero-layer layer-top"></div>
         <div class="hero-layer layer-bottom"></div>
@@ -63,7 +72,7 @@
   </section>
 
     <!-- Main Content -->
-<div class="summary container p-0 my-4">
+<div id="summary" class="container p-0 my-4">
   <div class="row g-0">
 
     <!-- Left Column (Icon Carousel) -->
@@ -106,7 +115,7 @@
     </div>
 
     <!-- Right Column (Text) -->
-    <div class="col-12 col-md-7 container-fluid container-left p-3 px-3 align-items-center m-auto">
+    <div class="col-12 col-md-7 container-fluid container-left p-5 px-3 align-items-center mx-auto">
         <!-- Elevator Pitch Theme: 
             > Headline
             > Description 1 (Who I am)
@@ -120,10 +129,12 @@
           through a systems-level lens, I bring a versatile, multidisciplinary skill set that makes me a
           high-impact contributor in demanding environments.
         </p>
-        <p> My career interests include management consulting, investment banking, equity research, 
-          private equity, venture capital, corporate and business development, and technology-focused 
-          entrepreneurship. I’m drawn to roles where my analytical capacity is tested, the stakes are high,
-          and achieving results requires deliberate effort, discipline, and growth.</p>
+        <p> My career interests involve the intersection of IT, Finance, and Entrepreneurship. I’m drawn to roles where my
+        analytical capacity is tested, the stakes are high, and achieving results requires deliberate effort, discipline, and
+        growth. I am looking for opportunities to work in the financial or legal sector, or within heavy commerce or
+        operations-heavy businesses, where I can build or automate management workflows - thereby reducing critical resources
+        spent such as money, time, and energy. My current focus involves building analytical & fintech applications, where the
+        system supplements decision-useful information for users.</p>
         <p> I bring original thinking, strong execution, and a track record of backing ideas with action. 
           If you believe I could add value to your team, feel free to reach out. I also encourage you to 
           learn more about my background—these details often lead to stronger conversations in coffee chats
@@ -135,25 +146,25 @@
 </div>
 
 <!-- Snapshots -->
-<section id="introSnapshots" class="p-2" style="max-width: 90vw; margin: auto;">
+<section id="introSnapshots" class="p-2 bg-white" style="max-width: 90vw; margin: auto;">
     <h1>Snapshots</h1>
     <!-- Snapshot: Gallery -->
   <div class="row g-0">
-    <div class="col-12 col-md-4 border p-3">
+    <div class="col-12 col-lg-4 border p-3">
       <h4>Gallery: Projects, Research & Thought Leadership</h4>
         <img class="d-block w-100" style="height: 500px; object-fit: cover; width: 100%;" src="images/Misc/image-2.png" alt="First slide">
       <a href="gallery.html" class="btn btn-outline-dark mt-3">Explore</a>
     </div>
 
     <!-- Snapshot: Resume -->
-    <div class="col-12 col-md-4 border p-3">
+    <div class="col-12 col-lg-4 border p-3">
       <h4>Resume</h4>
         <img class="d-block w-100" style="height: 500px; object-fit: cover; width: 100%;" src="images/Misc/image-1.png" alt="First slide">
       <a href="resume.html" class="btn btn-outline-dark mt-3">Explore</a>
     </div>
 
     <!-- Snapshot: Story -->
-    <div class="col-12 col-md-4 border p-3">
+    <div class="col-12 col-lg-4 border p-3">
     <h4>Story</h4>
       <div id="storyCarousel" class="carousel slide" data-bs-ride="carousel">
        <div class="carousel-inner">
@@ -189,15 +200,17 @@
     <li class="nav-item">
       <a href="gallery.html" class="nav-link px-2 text-warning hover-bright">Gallery</a>
     <li>
+    <li class="nav-item">
+      <a href="services.html" class="nav-link px-2 text-warning hover-bright">Services</a>
+    <li>
     <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-warning hover-bright">Contact</a>
     </li>
   </ul>
   <p class="text-center text-warning"> © Aryan Mahajan's Digital Portfolio. All Rights Reserved. </p>
 </footer>
-
 <!-- Bootstrap JS and dependencies (via CDN) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="script/script.js"></script>
+    <script type="module" src="script/script.js"> </script>
 </body>
 </html>

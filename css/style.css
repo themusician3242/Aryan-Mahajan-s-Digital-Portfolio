@@ -16,7 +16,7 @@ html, body {
 }
 
 /* Text */
-h1, h4 {
+h1, h2, h3 h4 {
     font-family: "Tinos", serif;
 }
 
@@ -36,7 +36,7 @@ p {
 }
 
 .nav-item-icon { 
-    height: 40px;
+    height: 36px;
 }
 
 .nav-item:hover a { 
@@ -52,7 +52,7 @@ a {
 #mainCarousel {
     width: 200px !important;
 }
-.summary .carousel-inner {
+#summary .carousel-inner {
     border: 3px solid yellow;
     box-shadow: 0 0 5px 2px gold;
 }
@@ -123,6 +123,28 @@ a {
 }
 .tooltip-light .bs-tooltip-end .tooltip-arrow::before {
     border-right-color: #FFFFFF;
+}
+
+/* Backgrounds */
+.bg-white { 
+    background-color: white !important;
+}
+#dynamicBackground3 { 
+    content: '';
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.adobe.com/creativecloud/photography/type/media_18ec078ac12361c5bd437dae615fd5dd92bfbfe51.jpg?width=1200&format=pjpg&optimize=medium");
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+}
+#dynamicBackground3.fade-in { 
+    opacity: 1;
 }
 
 /* Containers & Cards */
@@ -325,16 +347,31 @@ nav {
 }
 
 /* Summary */
-.summary h1 {
+#summary {
+    background-color: white;
+    border-radius: 50px;
+    transition: all 0.5s ease-out;
+}
+#summary:hover { 
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.438);
+    transform: scale(1.03);
+}
+
+#summary h1 {
     font-size: 4.5em;
 }
-.summary h5 {
+#summary h5 {
     font-size: 1.3em;
     color: blue;
     font-weight: bold;
 }
-.summary p {
+#summary p {
     font-size: 0.9em;
+}
+
+#introSnapshots { 
+    border-radius: 25px;
 }
 
 /* Story */
@@ -434,8 +471,13 @@ nav {
 }
 
 /* Radio styling */
-.dropdown-content input[type="radio"] {
+input[type="radio"] {
     accent-color: #004aad;
+    transition: 0.3s ease;
+    accent-color: gold;
+    /* or your theme */
+    width: 14px;
+    height: 14px;
 }
 
 /* Make header always keep space */
@@ -451,14 +493,6 @@ nav {
 /* When collapsed, center the toggle button */
 #resume-sidebar.collapsed .sidebar-header {
     justify-content: center;
-}
-
-.dropdown-content input[type="radio"] {
-    transition: 0.3s ease;
-    accent-color: gold;
-    /* or your theme */
-    width: 16px;
-    height: 16px;
 }
 
 /* Nav links */
@@ -832,6 +866,19 @@ hr {
 #contactsCard { 
     border: solid 3px gold;
     background-color: white;
+}
+
+/* Services Page: */
+.services-card {
+    min-width: 400px;
+    max-width: 700px;
+
+    transition: all 0.3 ease;
+}
+
+.services-card.expand {
+    max-width: 1600px;
+    min-width: 100%;
 }
 
 .bi { 
