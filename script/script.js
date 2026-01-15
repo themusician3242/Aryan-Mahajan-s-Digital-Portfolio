@@ -17,8 +17,10 @@ window.addEventListener('DOMContentLoaded', () => {
     case "gallery":
       runGalleryPage();
       break;
-    case "services":
-      runServicesPage();
+    /* case "services":
+      runServicesPage(); */
+    case "login":
+      runLoginPage();
     default:
   }
 
@@ -26,21 +28,24 @@ window.addEventListener('DOMContentLoaded', () => {
 const headerIcons = document.querySelectorAll(".header-icon");
 const navItems = document.querySelectorAll(".nav-item");
 const headerIconImages = [
-  "images/header-icons/icon-1.png",
-  "images/header-icons/icon-2.png",
-  "images/header-icons/icon-3.png",
-  "images/header-icons/icon-4.png",
-  "images/header-icons/icon-5.png",
-  "images/header-icons/icon-6.png",
+  "/images/header-icons/icon-1.png",
+  "/images/header-icons/icon-2.png",
+  "/images/header-icons/icon-3.png",
+  "/images/header-icons/icon-4.png",
+  "/images/header-icons/icon-5.png",
+  "/images/header-icons/icon-6.png",
+  "/images/header-icons/icon-7.png",
 ];
 
 const headerIconImagesHoverable = [
-  "images/header-icons/icon-1-hover.png",
-  "images/header-icons/icon-2-hover.png",
-  "images/header-icons/icon-3-hover.png",
-  "images/header-icons/icon-4-hover.png",
-  "images/header-icons/icon-5-hover.png",
-  "images/header-icons/icon-6-hover.png",
+  "/images/header-icons/icon-1-hover.png",
+  "/images/header-icons/icon-2-hover.png",
+  "/images/header-icons/icon-3-hover.png",
+  "/images/header-icons/icon-4-hover.png",
+  "/images/header-icons/icon-5-hover.png",
+  "/images/header-icons/icon-6-hover.png",
+  "/images/header-icons/icon-7-hover.png",
+
 ];
 
   navItems.forEach((item, index) => {
@@ -577,13 +582,58 @@ function runGalleryPage() {
 }
 
 function runServicesPage() {
-  const servicesCard = document.querySelectorAll(".services-card");
-  const servicesButton = document.querySelectorAll(".services-button");
 
-  servicesButton.forEach((item,index) => { 
-      item.addEventListener("click", () => { 
-        servicesCard[index].classList.toggle("expand");
-    });
+}
+
+function runLoginPage() { 
+  const username = "themusician3242@gmail.com";
+  const password = "lifeIsAHighway1390";
+  const passwordInput = document.getElementById("adminPassword");
+  const usernameInput = document.getElementById("adminUsername");
+  const loginButton = document.getElementById("loginBtn"); // Assuming you have a button
+  const textIncorrect = document.querySelector(".text-incorrect");
+
+  loginButton.addEventListener("click", () => {
+    // You must check .value, otherwise you are comparing an HTML element to a string
+    if (passwordInput.value === password && usernameInput.value === username) {
+      textIncorrect.textContent = "Success!"
+      textIncorrect.style.color = "lightgreen";
+
+      setTimeout(() => {
+        window.location.href = "admin.html";
+      }, 1000)
+      // Redirect or show content here
+    } else if (passwordInput.value === '' || usernameInput.value === '') { 
+        textIncorrect.textContent = "Please enter a value for either the username or the password."
+    }
+    else {
+      textIncorrect.textContent = "Username or password is incorrect. Please try again."
+    }
+  });
+
+  const togglePasswordBtn = document.querySelector("#togglePassword");
+
+  // Define your SVG strings once so the code stays clean
+  const eyeIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                </svg>`;
+
+  const eyeSlashIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+                        <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7 7 0 0 0 2.79-.588M5.21 3.088A7 7 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474z"/>
+                        <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"/>
+                    </svg>`;
+
+  togglePasswordBtn.addEventListener("click", (e) => {
+    // Prevent the button from trying to submit the form
+    e.preventDefault();
+
+    // 1. Toggle the type
+    const isPassword = passwordInput.getAttribute("type") === "password";
+    passwordInput.setAttribute("type", isPassword ? "text" : "password");
+
+    // 2. Update the innerHTML of the button
+    togglePasswordBtn.innerHTML = isPassword ? eyeSlashIcon : eyeIcon;
   });
 }
 

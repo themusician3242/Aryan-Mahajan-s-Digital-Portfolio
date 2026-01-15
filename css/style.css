@@ -1,3 +1,6 @@
+/* Tailwind CSS */
+@import "tailwindcss";
+
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quintessential&display=swap');
@@ -185,6 +188,22 @@ a {
 
 .card svg {
   transform: translateY(-12%);
+}
+
+.certification-card { 
+    max-width: 150px;
+    height: 150px !important;
+    box-shadow: 0 1px 1px black;
+
+    transition: all 0.3s ease;
+}
+
+.certification-card:hover { 
+    transform: scale(1.1);
+}
+
+.certification-card img { 
+    margin: auto;
 }
 
 
@@ -624,7 +643,7 @@ input[type="radio"] {
     max-width: 800px;
     margin: auto;
     padding: 30px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.25),rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.25))
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.45))
 }
 .story-subsection {
     padding: 25px 30px;
@@ -876,9 +895,13 @@ hr {
     transition: all 0.3 ease;
 }
 
-.services-card.expand {
-    max-width: 1600px;
-    min-width: 100%;
+.services-website-display { 
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.services-website-display:hover { 
+    transform: scale(1.1);
 }
 
 .bi { 
@@ -898,3 +921,104 @@ footer {
     bottom: 0;
 }
 
+/* Login & Admin Page: */
+
+#adminLoginMain { 
+    font-family: Tinos, serif;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-size: cover;
+    background-position: center;
+}
+
+#loginHero { 
+    background-image: url('../images/backgrounds/image-1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 800px) {
+    #adminLoginMain {
+        background-image: url('../images/backgrounds/image-1.jpg');
+        grid-template-columns: 1fr;
+    }
+
+    #loginHero {
+        display: none;
+    }
+
+    #adminLoginMain div:nth-child(2) { 
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        background: rgba(0, 0, 0, 0);
+    }
+
+    #adminLogin { 
+        background: none !important;
+    }
+}
+
+#loginCard { 
+    background-image: linear-gradient(to right, rgb(15, 15, 85), navy);
+
+    color: gold;
+    margin: auto;
+    width: 85%;
+    max-width: 600px;
+
+    padding: 50px;
+    border-radius: 25px;
+
+    border: rgb(206, 209, 0) solid 1px;
+}
+
+.admin-input {
+    border: 1px solid #d1d1d1;
+    transition: border-color 0.3s ease;
+}
+
+.admin-input:focus {
+    outline: none;
+    border-color: #c5a059;
+    box-shadow: 0 0 5px rgba(197, 160, 89, 0.2);
+}
+
+#adminLoginMain form {
+    width: 100%;
+}
+
+/* Make the containers fill the form width */
+.username-container, .password-container {
+    max-width: 400px;
+    /* Limits expansion on huge screens */
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* Useful for positioning that eye icon */
+}
+.username-container { 
+    width: 100%;
+}
+.password-container { 
+    max-width: 420px;
+    left: 10px;
+    width: 100%;
+}
+
+/* Make the inputs stretch to 100% of the container */
+#adminUsername,
+#adminPassword {
+    width: 100%;
+    padding: 4px;
+    border-radius: 10px;
+    border: inset 2px gold;
+    color: rgb(0, 0, 179);
+    margin: 8px 0;
+}
+
+.text-incorrect { 
+    color: rgb(255, 0, 0);
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+}
