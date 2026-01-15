@@ -637,4 +637,8 @@ function runLoginPage() {
   });
 }
 
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 6872d7574ebe6da02fa0f87fc03e8bf90d232add
