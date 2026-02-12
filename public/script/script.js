@@ -600,7 +600,7 @@ function runLoginPage() {
       textIncorrect.style.color = "lightgreen";
 
       setTimeout(() => {
-        window.location.href = "admin.html";
+        window.location.href = "https://admin.aryan-mahajan-s-digital-portfolio.net/";
       }, 1000)
       // Redirect or show content here
     } else if (passwordInput.value === '' || usernameInput.value === '') { 
@@ -636,9 +636,4 @@ function runLoginPage() {
     togglePasswordBtn.innerHTML = isPassword ? eyeSlashIcon : eyeIcon;
   });
 }
-
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 6872d7574ebe6da02fa0f87fc03e8bf90d232add
