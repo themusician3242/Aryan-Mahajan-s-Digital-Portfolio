@@ -633,7 +633,7 @@ function runLoginPage() {
     passwordInput.setAttribute("type", isPassword ? "text" : "password");
 
     // 2. Update the innerHTML of the button
-    togglePasswordBtn.innerHTML = isPassword ? eyeSlashIcon : eyeIcon;
+  togglePasswordBtn.innerHTML = isPassword ? eyeSlashIcon : eyeIcon;
   });
 }
 });
