@@ -76,3 +76,13 @@ export default {
     });
   },
 };
+
+// Add this right after the Notion endpoint for testing
+if (url.pathname === "/debug") {
+  return new Response(JSON.stringify({ 
+    status: STATUS,
+    message: STATUS === "UP" ? "Site is live" : "Maintenance mode on"
+  }), {
+    headers: { "content-type": "application/json" },
+  });
+}
