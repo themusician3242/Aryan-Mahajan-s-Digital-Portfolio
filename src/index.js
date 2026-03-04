@@ -10,8 +10,28 @@ export default {
       });
     }
 
+    const downtimeHTML = 
+      `
+      <html>
+        <body> 
+          <h1> Website is currently down for maintenance. Will be live soon! </h1> 
+          <p> In the meantime, please visit <a href="https://www.linkedin.com/in/aryan-mahajan-2967ab367/"> Aryan Mahajan's LinkedIn. </a> </p>
+        </body>
+      </html>
+      `
+
+    const status = "DOWN";
+
     // 2. THIS HOSTS YOUR WEBSITE
     // This looks into your 'public' folder and serves index.html, CSS, and JS
-    return env.ASSETS.fetch(request);
+    // return env.ASSETS.fetch(request);
+    if (status === "UP") {
+      return env.ASSETS.fetch(request);
+    } else {
+      return new Response(html, {
+        status: 503,
+        headers: {"content-type" : "text/html"}
+      });
+    }
   },
 };
