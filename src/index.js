@@ -2,7 +2,7 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
-    // 1. Notion Endpoint - always accessible
+    // 1. Notion Endpoint
     if (url.pathname === "/api/notion") {
       return new Response(JSON.stringify({ message: "Notion data coming soon!" }), {
         headers: { "content-type": "application/json" },
@@ -67,22 +67,13 @@ export default {
       </html>
     `;
 
+    // ✅ This return is INSIDE the fetch function where it belongs
     return new Response(downtimeHTML, {
       status: 503,
       headers: { 
         "content-type": "text/html",
-        "cache-control": "no-store" // Prevent caching
+        "cache-control": "no-store"
       }
     });
   },
-};
-
-// Add this right after the Notion endpoint for testing
-if (url.pathname === "/debug") {
-  return new Response(JSON.stringify({ 
-    status: STATUS,
-    message: STATUS === "UP" ? "Site is live" : "Maintenance mode on"
-  }), {
-    headers: { "content-type": "application/json" },
-  });
-}
+};  // ✅ The export ends HERE - no returns after this!
