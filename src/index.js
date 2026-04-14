@@ -10,7 +10,7 @@ export default {
     }
 
     // 2. MANUAL TOGGLE - Change this to "UP" when you want the site live
-    const STATUS = "DOWN"; // "UP" or "DOWN"
+    const STATUS = "UP"; // "UP" or "DOWN"
 
     // 3. If status is UP, serve the normal site
     if (STATUS === "UP") {
